@@ -1,0 +1,29 @@
+buildscript {
+  repositories {
+    mavenLocal()
+  }
+  dependencies {
+    classpath "io.splitest:splitest:0.1.5"
+  }
+}
+
+apply plugin: "io.splitest"
+
+apply plugin: "java"
+
+repositories {
+	mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+	testCompile 'org.powermock:powermock-api-mockito:1.6.5'
+	testCompile 'org.powermock:powermock-module-junit4:1.6.5'
+	testCompile 'org.powermock:powermock-module-junit4-rule:1.6.5'
+	testCompile 'org.powermock:powermock-classloading-base:1.6.5'
+	testCompile 'org.powermock:powermock-classloading-xstream:1.6.5'
+
+
+    testCompile 'junit:junit:4.12'
+    testCompile 'io.splitest:splitest:0.1.5'
+}
